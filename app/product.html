@@ -4,33 +4,41 @@
 	<title>产品介绍</title>
 	<link rel="stylesheet" href="../css/base.css" />
 	<link rel="stylesheet" href="../css/swiper.min.css" />
-	<link rel="stylesheet" href="../css/chanpin.css">
+	<link rel="stylesheet" href="../css/product.css">
+	<script src="../js/jquery-1.7.2.js"></script>
 	<script src="../js/swiper.min.js"></script>
-	<script src="../js/chanpin.js"></script>
+	<script src="../js/product.js"></script>
 	<script src="../js/zepto.min.js"></script>
 </head>
 <body>
-<!----点击显示隐藏---->
-<div id="header">
-	<a id="menu" href="javascript:;"><img src="../images/menu.png" alt="" /></a>
-	<a id="close" href="javascript:;"><img src="../images/close.png" alt="" /></a>
-	<h2>大数医达</h2>
-</div>
-<!----透明层---->
-<div id="header_close">
-	<ul class="close_1">
-		<li><a href="index.html">首页</a></li>
-		<li><a href="chanpin.html">产品介绍</a></li>
-		<li><a href="#q_con4">联系方式</a></li>
-	</ul>
-</div>
-<!----内容---->
-<div id="icon">
+<div class="wrap">
+<!-----header------>
+	<div id="x_header">
+		<a href="javascript:;" id="menu"></a>
+		<h1>大数医达</h1>
+	</div>
+<!----------------toumingceng---------------------->
+	<div id="x_close">
+		<div class="x_opcity"></div>
+		<div class="container">
+			<div id="x_header">
+				<a href="javascript:;" id="close"></a>
+				<h1>大数医达</h1>
+			</div>			
+			<ul>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="product.html">产品介绍</a></li>
+				<li><a href="../index.html#contact">联系方式</a></li>
+			</ul>
+		</div>
+	</div>	
+
+	<!--------------content---------------->
+	<div id="icon">
 	<div class="icon_1">
 		<img src="../images/banner2.jpg" alt=""/>
 		<h1>产品介绍</h1>
 	</div>
-
 	 <div class="icon_2">
         <ul>
             <li class="fl active">
@@ -144,7 +152,6 @@
         </ul>
         <div class="clear"></div>
     </div>
-
 	<div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -182,8 +189,7 @@
             </div>
         </div>
     </div>
-
-
-</div>	
+	</div>	
+</div>
 </body>
 </html>
