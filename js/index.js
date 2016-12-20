@@ -13,6 +13,9 @@ $(function(){
 	$('#close').click(function(){
 		$('#x_close').hide();
 	})
+	$('#contact1').click(function(){
+		$('#x_close').hide();
+	})
 	/*-----------------tab-------------------*/
 	var swiper = new Swiper('.swiper-container', {
         scrollbar: '.swiper-scrollbar',
