@@ -1,0 +1,27 @@
+html{ font-size: 100px; }
+body{ font-size: 0.14rem; font-family: "Microsoft YaHei";}
+header{  background: -webkit-linear-gradient(#fff,#efefef); position: relative; padding:0.3rem 0; }
+header h1{ background: url(../img/logo.png) no-repeat; background-size: cover; text-indent: -999em; width: 1.48rem; height: 0.39rem; margin: 0 auto; }
+header .a1{ background: url(../img/fanhui.png) no-repeat; background-size: cover; width: 1.22rem; height: 0.58rem; position: absolute; left: 0.22rem; top: 0.22rem; }
+header .a2{ background: url(../img/fenlei.png) no-repeat; background-size: cover; width: 0.98rem; height: 0.58rem; position: absolute; right: 0.22rem; left:auto; top: 0.22rem; }
+
+nav ul{ display: flex; }
+nav ul li{ flex: 1; float: left; line-height: 0.8rem; border: 0.01rem solid #efefef; box-sizing: border-box; text-align: center;}
+nav ul li:nth-child(1), nav ul li:nth-child(2){ border-left: none; }
+nav ul li:nth-child(2), nav ul li:nth-child(3), nav ul li:nth-child(4){ border-right: none; }
+nav ul li a{ color: #999; font-size: 0.22rem; }
+nav ul li .on{ color: #d51942; }
+
+/* section{ height: 7rem; overflow: hidden; }
+ */section ul li{ border-bottom: 0.01rem solid #efefef; padding: 0.12rem 0;}
+section ul li a div{ float: left; color: #000; }
+section ul li a .pic1{ margin-left: 0.2rem;  padding: 0.08rem; border: 0.01rem solid #efefef; box-sizing: border-box; }
+section ul li a .pic1 img{ width: 2.24rem; }
+section ul li a .content{ width: 3rem; font-size: 0.26rem; margin-left: 0.3rem; }
+section ul li a .content p span{ color: #d51942; }
+section ul li a .content p:nth-child(1){ line-height: 0.36rem; }
+section ul li a .content p:nth-child(2){ font-size: 0.18rem; margin: 0.1rem 0;  }
+section ul li a .content p:nth-child(2) strong{text-decoration: line-through; color: #999; font-weight: normal; }
+section ul li a .content p:nth-child(2) span{ color: #d51942; margin-right: 0.26rem; }
+section ul li a .content p:nth-child(2) span b{ font-size: 0.3rem; }
+section ul li a .content p:nth-child(3){ font-size: 0.16rem; color: #999; }

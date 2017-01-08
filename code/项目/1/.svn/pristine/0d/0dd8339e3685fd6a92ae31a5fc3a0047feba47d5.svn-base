@@ -1,0 +1,182 @@
+html{
+	font-size: 100px;
+}
+.wrap{
+    width: 3.75rem;
+}
+/*-------------------------header---------------------*/
+#x_header{
+    background: #000;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    position: relative;
+    text-align: center;
+}
+#x_header #menu{
+    display: inline-block;
+    width:0.225rem;
+    height:0.16rem;
+    background: url(../images/menu.png) no-repeat;
+    position: absolute;
+    top: 0.14rem;
+    left: 0.27rem;
+}
+#x_header h1{
+    font-size: 0.17rem;
+    color: #fff;
+}
+/*-----------------toumingceng----------------------*/
+#x_close{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+#x_close .x_opcity{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.8;
+    filter: alpha(opacity:80);
+}
+ #x_close .container{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
+ #x_close .container #close{
+    display: inline-block;
+    width:0.225rem;
+    height:0.16rem;
+    background: url(../images/close.png) no-repeat;
+    position: absolute;
+    top: 0.14rem;
+    left: 0.27rem;
+}
+ #x_close #x_header h1{
+    font-size: 0.17rem;
+    color: #fff;
+}
+#x_close .container ul{
+    width: 1rem;
+    text-align: center;
+    margin:0 auto;
+    font-size: 0rem;        
+}
+#x_close .container ul li{
+    border-bottom: 0.01rem solid #fff;
+}
+#x_close .container ul li a{
+    color: #fff;
+    font-size: 0.2rem;
+    line-height: 0.6rem;
+}
+/*-------------content--------------*/
+.icon_1{
+	width:3.75rem;
+	height:1.46rem;	
+	position:relative;
+}
+.icon_1 img{
+	width:100%;
+	height:100%;
+	
+}
+.icon_1 h1{
+	color:#fff;
+	font-size:0.3rem;
+	position:absolute;
+	top:0.5rem;
+	left:1.22rem;
+}
+.icon_2 {
+    padding: 0.35rem 0 0.55rem;
+}
+.icon_2 li{
+    width: 25%;
+    text-align: center;
+    font-size: 0;
+}
+.icon_2 li p {
+    font-size: 0.12rem;
+    line-height: 0.18rem;
+    padding-top: 0.15rem;
+}
+.active {
+    color: red;
+}
+.active .intr-svg .st0 {
+    fill:#e20d22
+}
+.intr-svg {
+    width: 0.5rem;
+    height: 0.4rem;
+}
+.swiper-container {
+    width: 100%;
+    margin:0 auto;
+    padding-top: 0.45rem;
+}
+.swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    width: 100%;
+    text-align: left;
+    border-bottom:0.3rem;
+
+}
+.swiper-slide:nth-child(2n) {
+    width: 40%;
+}
+.swiper-slide:nth-child(3n) {
+    width: 20%;
+}
+.swiper-slide h2 {
+    font-weight: bold;
+    font-size: 0.23rem;
+    color: #e30b20;
+    border-left: 0.04rem solid #e30b20;
+    margin:0 0 0.45rem 0.27rem;
+    padding-left: 0.15rem;
+}
+.swiper-slide .content {
+    padding:0 0.45rem;
+    font-size: 0.14rem;
+    line-height: 0.25rem;
+
+}
+.swiper-slide .content img {
+    max-width: 100%;
+   
+}
+.swiper-slide .content p {
+    margin-top:0.3rem;
+}
+
+.icon_2 {
+    padding: 0.35rem 0 0.55rem;
+}
+.icon_2 li{
+    width: 25%;
+    text-align: center;
+    font-size: 0;
+}
+.icon_2 li p {
+    font-size: 0.12rem;
+    line-height: 0.18rem;
+    padding-top: 0.15rem;
+}
+.active {
+    color: red;
+}
+.active .intr-svg .st0 {
+    fill:#e20d22
+}
+.intr-svg {
+    width: 0.5rem;
+    height: 0.4rem;
+}

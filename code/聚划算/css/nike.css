@@ -1,0 +1,34 @@
+html{ font-size: 100px; }
+body{ font-size: 0.14rem; font-family: "Microsoft YaHei";}
+header{  background: -webkit-linear-gradient(#fff,#efefef); position: relative; padding:0.3rem 0; }
+header h1{ height: 0.39rem; font-size: 0.3rem; color: #333; margin: 0 auto; text-align: center; font-weight: normal;}
+header .a1{ background: url(../img/fanhui.png) no-repeat; background-size: cover; width: 1.22rem; height: 0.58rem; position: absolute; left: 0.22rem; top: 0.22rem; }
+
+.banner { position: relative; }
+.banner img{ width: 100%; vertical-align: top;}
+.banner div{position: absolute; left: 0; bottom: 0;background: rgba(0,0,0,.5); width: 100%; height: 0.4rem; color: #fff; line-height: 0.4rem; padding-left: 0.14rem;}
+
+.logo{ width: 100%; height: 0.78rem; background: -webkit-linear-gradient(#fff 90%,#ececec); border-bottom: 0.01rem solid #999; box-sizing: border-box; padding-top: 0.1rem;}
+.logo .txt{ margin-right: 0.2rem;}
+.logo img{ width: 1.25rem; height: 0.6rem; margin-left: 0.28rem; }
+.logo .txt b{ color: #c7223d; font-size: 0.44rem; margin-right: 0.18rem; line-height: 0.48rem;}
+.logo .txt p{ width: 0.46rem; color: #999; font-size: 0.18rem; line-height: 0.24rem;}
+.logo .txt p span{ color: #c7223d;  }
+
+
+
+section ul li{ border-bottom: 0.01rem solid #efefef; padding: 0.2rem 0;}
+section ul li a div{ float: left; color: #000; }
+section ul li a .pic1{ margin-left: 0.2rem;  padding: 0.08rem; border: 0.01rem solid #efefef; box-sizing: border-box; }
+section ul li a .pic1 img{ width: 2.24rem; }
+section ul li a .content{ width: 3rem; font-size: 0.26rem; margin-left: 0.3rem; }
+section ul li a .content p span{ color: #d51942; }
+section ul li a .content p:nth-child(1){ line-height: 0.36rem; }
+section ul li a .content p:nth-child(2){ font-size: 0.18rem; margin: 0.1rem 0;  }
+section ul li a .content p:nth-child(2) strong{text-decoration: line-through; color: #999; font-weight: normal; }
+section ul li a .content p:nth-child(2) span{ color: #d51942; margin-right: 0.26rem; }
+section ul li a .content p:nth-child(2) span b{ font-size: 0.3rem; }
+section ul li a .content p:nth-child(3){ font-size: 0.16rem; color: #999; }
+
+
+

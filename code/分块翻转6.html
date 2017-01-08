@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>智能社— http://www.zhinengshe.com</title>
+<style>
+.box{ width:700px; height:400px; margin:50px auto; position:relative; }
+.box span{ position:absolute; left:0; top:0; transform-style:preserve-3d; transform:perspective(800px) rotateY(0deg); transition:1s all ease; }
+span i{ position:absolute; left:0; top:0; width:100%; height:100%; }
+span .front{ background:url(img/0.jpg) no-repeat; transform: translateZ(1px); }
+span .back{ background:url(img/1.jpg) no-repeat; transform:scale(-1,1) translateZ(-1px); }
+
+</style>
+<script>
+window.onload=function (){
+	var oBox=document.querySelector('.box');
+	
+	var R=4;
+	var C=7;
+	
+	for(var r=0; r<R; r++){
+		for(var c=0; c<C; c++){
+			var oS=document.createElement('span');
+			
+			var oW=oBox.offsetWidth/C;
+			var oH=oBox.offsetHeight/R;
+			
+			oS.style.width=oW+'px';
+			oS.style.height=oH+'px';
+			
+			oS.style.left=oW*c+'px';
+			oS.style.top=oH*r+'px';
+			
+			oS.innerHTML='<i class="front"></i><i class="back"></i>';
+			
+			var oF=oS.children[0];
+			var oB=oS.children[1];
+			
+			oF.style.backgroundPosition='-'+oW*c+'px -'+oH*r+'px';
+			oB.style.backgroundPosition='-'+oW*c+'px -'+oH*r+'px';
+			
+			oBox.appendChild(oS);
+			
+			oS.row=r;
+			oS.col=c;
+		}
+	}
+	
+	var aS=oBox.children;
+	var iNow=0;
+	var bOk=false;
+	
+	oBox.onclick=function (){
+		if(bOk)return;
+		bOk=true;
+		iNow++;
+		for(var i=0; i<aS.length; i++){
+			aS[i].style.transition='2s all ease '+(aS[i].row+aS[i].col)*100+'ms';
+			aS[i].style.transform='perspective(800px) rotateY(-180deg)';
+		}
+	};
+	aS[aS.length-1].addEventListener('transitionend',function (){
+		for(var i=0; i<aS.length; i++){
+			aS[i].style.transition='none';
+			aS[i].style.transform='perspective(800px) rotateY(0deg)';
+			
+			aS[i].children[0].style.backgroundImage='url(img/'+iNow%3+'.jpg)';
+			aS[i].children[1].style.backgroundImage='url(img/'+(iNow+1)%3+'.jpg)';
+			bOk=false;
+		}
+	},false);
+};
+</script>
+</head>
+
+<body>
+	<div class="box"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

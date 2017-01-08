@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript">
+			window.onload=function(){
+				var lunbo=document.getElementById('lunbo');
+				var over=lunbo.getElementsByTagName('li');
+				var bigt=document.getElementById('cha');
+				var change=bigt.getElementsByTagName('li');
+				
+				for (var i=0;i<over.length;i++){
+					over[i].index=i;
+					over[i].onmouseover=function(){
+						for(var i=0;i<over.length;i++){
+							over[i].style.opacity='0.7';
+							over[i].style.border='none';
+							change[i].style.display='none';
+						}
+						this.style.opacity='1';
+						this.style.border='2px solid green';
+						change[this.index].style.display='block';
+					}
+				}
+				var lunbo2=document.getElementById('ul1')
+				var dian=lunbo2.getElementsByTagName('li')
+				var scroll=document.getElementById('ul2')
+				var change1=scroll.getElementsByTagName('li')
+				for (var i=0;i<dian.length;i++){
+					dian[i].index=i;
+					dian[i].onmouseover=function(){
+						for (var i=0;i<dian.length;i++){
+							dian[i].style.background='#eee';
+							dian[i].style.color='#333';
+							change1[i].style.display='none';
+						}
+						this.style.background='green';
+						this.style.color='#fff';
+						change1[this.index].style.display='block';
+					}
+				}
+				var b=document.getElementById('b');
+				var c=document.getElementById('c');
+				b.onclick=function(){
+					c.style.display='none';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box wrap">
+			<div class="logo clearfix">
+				<h1 class="fl">
+					<a href="#">360影视</a>
+				</h1>
+				<div class="toptext" id="b">
+					<input type="text" class="ip1"  />
+					<b id="c">哆啦A梦：伴我同行</b>
+					<i></i>
+				</div>
+				<div class="topr fr">
+					<p class="rp1 fl">我的影视</p>
+					<p class="rp2 fl">观看记录</p>
+					<p class="rp3 fl">app下载</p>
+				</div>
+			</div>
+			<div class="nav clearfix" style="    border-top: 2px solid green;
+    margin-bottom: 14px;">
+				<ul class="navl fl">
+					<li class="li1"><a href="#">首页</a></li>
+					<li><a href="#">网络院线</a></li>
+					<li><a href="#">电视剧</a></li>
+					<li><a href="#">电影&bull;预告</a></li>
+					<li><a href="#">综艺</a></li>
+					<li><a href="#">动漫</a></li>
+					<li><a href="#">资讯</a></li>
+					<li><a href="#">娱乐</a></li>
+					<li><a href="#">直播</a></li>
+					<li><a href="#">广场</a></li>
+				</ul>
+				<ul class="navr fr">
+					<li><a href="#">秀场</a></li>
+					<li><a href="#">体育</a></li>
+					<li><a href="#">搞笑</a></li>
+					<li><a href="#">舞蹈</a></li>
+					<li><a href="#">音乐</a></li>
+					<li><a href="#">游戏</a></li>
+					<li class="li2"><a href="#">专题</a></li>
+				</ul>
+			</div>
+			<div class="bigtu clearfix">
+				<ul id="cha" class="cha">
+					<li class="on">
+						<img src="img/big.jpg" alt=""  />
+						<p class="p1">大汉情缘之云中歌</p>
+						<p class="p2">云歌嫁孟珏上演冷血复仇 四度与霍成君对峙</p>
+					</li>
+					<li>
+						<img src="img/bt1.jpg" alt="" width="1007" height="483"  />
+						<p class="p1">大汉情缘之云中歌</p>
+						<p class="p2">云歌嫁孟珏上演冷血复仇 四度与霍成君对峙</p>
+					</li>
+					<li>
+						<img src="img/bt2.jpg" alt="" width="1007" height="483" />
+						<p class="p1">大汉情缘之云中歌</p>
+						<p class="p2">云歌嫁孟珏上演冷血复仇 四度与霍成君对峙</p>
+					</li>
+					<li>
+						<img src="img/bt3.jpg" alt="" width="1007" height="483" />
+						<p class="p1">大汉情缘之云中歌</p>
+						<p class="p2">云歌嫁孟珏上演冷血复仇 四度与霍成君对峙</p>
+					</li>
+					<li>
+						<img src="img/bt4.jpg" alt="" width="1007" height="483" />
+						<p class="p1">大汉情缘之云中歌</p>
+						<p class="p2">云歌嫁孟珏上演冷血复仇 四度与霍成君对峙</p>
+					</li>
+					<li>
+						<img src="img/bt5.jpg" alt=""  width="1007" height="483"/>
+						<p class="p1">大汉情缘之云中歌</p>
+						<p class="p2">云歌嫁孟珏上演冷血复仇 四度与霍成君对峙</p>
+					</li>
+					<li>
+						<img src="img/bt6.jpg" alt="" width="1007" height="483" />
+						<p class="p1">大汉情缘之云中歌</p>
+						<p class="p2">云歌嫁孟珏上演冷血复仇 四度与霍成君对峙</p>
+					</li>
+					<li>
+						<img src="img/bt7.jpg" alt="" width="1007" height="483" />
+						<p class="p1">大汉情缘之云中歌</p>
+						<p class="p2">云歌嫁孟珏上演冷血复仇 四度与霍成君对峙</p>
+					</li>
+					<li>
+						<img src="img/bt8.jpg" alt="" width="1007" height="483" />
+						<p class="p1">大汉情缘之云中歌</p>
+						<p class="p2">云歌嫁孟珏上演冷血复仇 四度与霍成君对峙</p>
+					</li>
+				</ul>
+				<ul class="lunbo" id="lunbo">
+					<li>
+						<a href="#">
+							<img src="img/bt1.jpg" alt=""  /> 
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/bt2.jpg" alt=""  /> 
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/bt3.jpg" alt=""  /> 
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/bt4.jpg" alt=""  /> 
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/bt5.jpg" alt=""  /> 
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/bt6.jpg" alt=""  /> 
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/bt7.jpg" alt=""  /> 
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/bt8.jpg" alt=""  /> 
+						</a>
+					</li>
+					<li class="lir">
+						<a href="#">
+							<img src="img/bt1.jpg" alt=""  /> 
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="hot clearfix">
+				<div class="hotl fl">
+					<div class="lt fl">
+						<h2>今日热门</h2>
+						<i class="ii1">
+							<a href="#">热点</a>
+						</i>
+						<i>
+							<a href="#">美女</a>
+						</i>
+						<i>
+							<a href="#">游戏</a>
+						</i>
+						<i>
+							<a href="#">搞笑</a>
+						</i>
+						<i class="ii">
+							<a href="#">更多>></a>
+						</i>
+					</div>
+					<div class="ldl fl">
+						<div class="left fl">
+							<div class="tt">
+								<img src="img/tu1.jpg" alt="" />
+								<p class="pp"></p>
+								<p class="p">趁其不备拔腿逃走</p>
+							</div>
+							<p class="ppp">女子餐厅被刀架脖劫持 假装喂劫犯饮料瞬间逃离</p>
+						</div>
+						<div class="tu4 fl">
+							<div class="fl aa">
+								<div class="tt">
+									<img src="img/tu2.jpg" alt="" />
+									<p class="pp"></p>
+									<p class="p">与TFBOYS合影</p>
+								</div>
+								<p class="ppp p3">李小璐甜馨穿亲子装出街</p>
+								<div class="tt">
+									<img src="img/tu3.jpg" alt="" />
+									<p class="pp"></p>
+									<p class="p">小女儿罕见露面</p>
+								</div>
+								<p class="ppp">文章为爱马庆生照曝光</p>
+							</div>
+							<div class="fl bb">
+								<div class="tt">
+									<img src="img/tu4.jpg" alt="" />
+									<p class="pp"></p>
+									<p class="p">与TFBOYS合影</p>
+								</div>
+								<p class="ppp p3">北京居民遛狗现淫秽窝点</p>
+								<div class="tt">
+									<img src="img/tu5.jpg" alt="" />
+									<p class="pp"></p>
+									<p class="p">与TFBOYS合影</p>
+								</div>
+								<p class="ppp">澳海滩现奇特蓝色生物</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="fr hotr">
+					<h2>独家热门资讯</h2>
+					<div class="tu">
+						<a href="#"><img src="img/ttu1.jpg" alt="" /></a>
+						<p class="p1"></p>
+						<p class="p2"><a href="#" class="col">《小西天狄道传奇》高僧忍辱救苍生</a></p>
+					</div>
+					<p><a href="#">二十国集团峰会即将开幕</a></p>
+					<p><a href="#">官员与同学开房被撤职 称“和衣而睡”</a></p>
+					<p><a href="#">深扒范玮琪如何从“万人迷”变为“万</a></p>
+					<p><a href="#">堂姐设毒宴接风 23岁嫩模酒店吸毒被拘</a></p>
+					<p><a href="#">美媒炒中国新航母使用电磁弹射</a></p>
+				</ul>
+			</div>
+			<div class="tv clearfix">
+				<div class="tvll fl">
+					<div class="tvl fl">
+						<h2>电视剧</h2>
+						<i class="ii1">
+							<a href="#">热门</a>
+						</i>
+						<i>
+							<a href="#">最新</a>
+						</i>
+						<i>
+							<a href="#">内地</a>
+						</i>
+						<i>
+							<a href="#">港台</a>
+						</i>
+						<i>
+							<a href="#">韩剧</a>
+						</i>
+						<i>
+							<a href="#">美剧</a>
+						</i>
+						<i>
+							<a href="#">泰剧</a>
+						</i>
+						<i class="ii">
+							<a href="#">更多>></a>
+						</i>
+					</div>
+					<div class="mt fl">
+						<ul class="top clearfix">
+							<li>
+								<a href="#"><img src="img/aa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li>
+								<a href="#"><img src="img/aa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li>
+								<a href="#"><img src="img/aa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li class="li1">
+								<a href="#"><img src="img/aa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+						</ul>
+						<ul class="down clearfix">
+							<li>
+								<a href="#"><img src="img/aa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li>
+								<a href="#"><img src="img/aa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li>
+								<a href="#"><img src="img/aa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li class="li1">
+								<a href="#"><img src="img/aa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tvrr fr">
+					<h3>本月最受关注的电视剧</h3>
+					<ol>
+						<li>
+							<a href="#"><img src="img/t01c2ed21113ed03c95.jpg" alt="" /></a>
+							<p class="p1"></p>
+							<p class="p4"><img src="img/t01ed6a1e044fe0626f.png" alt="" /></p>
+							<p class="p2"><a href="#">大秧歌</a><i>719.6万</i></p>
+							<p class="p3">1</p>
+						</li>
+						<li class="lll">
+							<span>2</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>3</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>4</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>5</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>6</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>7</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>8</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>9</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>10</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+					</ol>
+					<div class="btm">
+						<h3>电视剧筛选</h3>
+						<p><a href="#">类型 ：偶像   都市   谍战   古装</a></p>
+						<p><a href="#">地区 ：内地   美国   韩国   香港</a></p>
+						<p><a href="#">年份 ：2015    2014    2013  2012</a></p>
+						<p><a href="#">演员 ：孙俪   唐嫣   钟汉良   胡歌</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="tv movie clearfix">
+				<div class="tvll fl">
+					<div class="tvl fl">
+						<h2>电影</h2>
+						<i class="ii1">
+							<a href="#">热门</a>
+						</i>
+						<i>
+							<a href="#">最新</a>
+						</i>
+						<i>
+							<a href="#">喜剧</a>
+						</i>
+						<i>
+							<a href="#">爱情</a>
+						</i>
+						<i>
+							<a href="#">动作</a>
+						</i>
+						<i>
+							<a href="#">恐怖</a>
+						</i>
+						<i>
+							<a href="#">魔幻</a>
+						</i>
+						<i class="ii">
+							<a href="#">更多>></a>
+						</i>
+					</div>
+					<div class="mt fl">
+						<ul class="top clearfix">
+							<li>
+								<a href="#"><img src="img/aaaaa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li>
+								<a href="#"><img src="img/aaaaa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li>
+								<a href="#"><img src="img/aaaaa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li class="li1">
+								<a href="#"><img src="img/aaaaa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+						</ul>
+						<ul class="down clearfix">
+							<li>
+								<a href="#"><img src="img/aaaaa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li>
+								<a href="#"><img src="img/aaaaa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li>
+								<a href="#"><img src="img/aaaaa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+							<li class="li1">
+								<a href="#"><img src="img/aaaaa.jpg" alt="" /></a>
+								<p class="p1"></p>
+								<p class="p2"><a href="#">更新至第三集</a><span>8.0</span>分</p>
+								<p class="p3">万万没想到 第三季</p>
+								<p class="p4">男神大锤迷倒众女神</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tvrr fr">
+					<h3>本月最受关注的电影</h3>
+					<ol>
+						<li>
+							<a href="#"><img src="img/t01d2bec268fdc9f215.jpg" alt="" /></a>
+							<p class="p1"></p>
+							<p class="p4"><img src="img/t01ed6a1e044fe0626f.png" alt="" /></p>
+							<p class="p2"><a href="#">九层妖塔</a><i>719.6万</i></p>
+							<p class="p3">1</p>
+						</li>
+						<li class="lll">
+							<span>2</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>3</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>4</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>5</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>6</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>7</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>8</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>9</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+						<li class="lll">
+							<span>10</span>
+							<a href="#" class="a1">大汉情缘之云中歌</a>
+							<a href="#" class="a2">423.27万</a>
+						</li>
+					</ol>
+					<div class="btm">
+						<h3>电影筛选</h3>
+						<p><a href="#">类型 ：偶像   都市   谍战   古装</a></p>
+						<p><a href="#">地区 ：内地   美国   韩国   香港</a></p>
+						<p><a href="#">年份 ：2015    2014    2013  2012</a></p>
+						<p><a href="#">演员 ：孙俪   唐嫣   钟汉良   胡歌</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="yugao clearfix">
+				<div class="yul fl">
+					<p class="p1 fl"><a href="#">电影.预告片</a></p>
+					<p class="p2 fl"><a href="#">更多>></a></p>
+				</div>
+				<div class="yur fr">
+					<p class="p3">电影.专题</p>
+				</div>
+				<div class="tul fl">
+					<div class="yr fl">
+						<a href="#"><img src="img/bbbbb.jpg" alt=""/></a>
+						<p class="p1"><img src="img/t019ef309043fe7ad3f.png" alt="" /></p>
+						<p class="p2"></p>
+						<p class="p3">你从没见过！震撼的蚂蚁军队</p>
+						<p class="p4">《蚁人》</p>
+					</div>
+					<div class="yr fl">
+						<a href="#"><img src="img/bbbbb.jpg" alt=""/></a>
+						<p class="p1"><img src="img/t019ef309043fe7ad3f.png" alt="" /></p>
+						<p class="p2"></p>
+						<p class="p3">你从没见过！震撼的蚂蚁军队</p>
+						<p class="p4">《蚁人》</p>
+					</div>
+					<div class="yr fl">
+						<a href="#"><img src="img/bbbbb.jpg" alt=""/></a>
+						<p class="p1"><img src="img/t019ef309043fe7ad3f.png" alt="" /></p>
+						<p class="p2"></p>
+						<p class="p3">你从没见过！震撼的蚂蚁军队</p>
+						<p class="p4">《蚁人》</p>
+					</div>
+					<div class="yr fl">
+						<a href="#"><img src="img/bbbbb.jpg" alt=""/></a>
+						<p class="p1"><img src="img/t019ef309043fe7ad3f.png" alt="" /></p>
+						<p class="p2"></p>
+						<p class="p3">你从没见过！震撼的蚂蚁军队</p>
+						<p class="p4">《蚁人》</p>
+					</div>
+					<div class="yr yrl fl">
+						<a href="#"><img src="img/t01c14bd486fd3b5fd6.jpg" alt=""/></a>
+						<p class="p1"><img src="img/t019ef309043fe7ad3f.png" alt="" /></p>
+						<p class="p2"></p>
+						<p class="p3">11观影指南 欧美大片强势霸屏</p>
+						<p class="p4">票房女王赵钦的上位史</p>
+					</div>
+				</div>
+			</div>
+			<div class="hot clearfix">
+				<div class="hotl fl">
+					<div class="lt fl">
+						<h2>综艺</h2>
+						<i class="ii1">
+							<a href="#">热门</a>
+						</i>
+						<i>
+							<a href="#">选秀</a>
+						</i>
+						<i>
+							<a href="#">情感</a>
+						</i>
+						<i>
+							<a href="#">访谈</a>
+						</i>
+						<i class="ii">
+							<a href="#">更多>></a>
+						</i>
+					</div>
+					<div class="ldl fl">
+						<div class="left fl">
+							<div class="tt">
+								<img src="img/t01f7331447c8444211.jpg" alt="" />
+								<p class="pp"></p>
+								<p class="p">趁其不备拔腿逃走</p>
+							</div>
+							<p class="ppp">女子餐厅被刀架脖劫持 假装喂劫犯饮料瞬间逃离</p>
+						</div>
+						<div class="tu4 fl">
+							<div class="fl aa">
+								<div class="tt">
+									<img src="img/t014679aeadedfba987.jpg" alt="" />
+									<p class="pp"></p>
+									<p class="p">与TFBOYS合影</p>
+								</div>
+								<p class="ppp p3">李小璐甜馨穿亲子装出街</p>
+								<div class="tt">
+									<img src="img/t0129150034cb0fd033.jpg" alt="" />
+									<p class="pp"></p>
+									<p class="p">小女儿罕见露面</p>
+								</div>
+								<p class="ppp">文章为爱马庆生照曝光</p>
+							</div>
+							<div class="fl bb">
+								<div class="tt">
+									<img src="img/t0163766e2051183d11.jpg" alt="" />
+									<p class="pp"></p>
+									<p class="p">与TFBOYS合影</p>
+								</div>
+								<p class="ppp p3">北京居民遛狗现淫秽窝点</p>
+								<div class="tt">
+									<img src="img/t01505e9579464f4825.jpg" alt="" />
+									<p class="pp"></p>
+									<p class="p">与TFBOYS合影</p>
+								</div>
+								<p class="ppp">澳海滩现奇特蓝色生物</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="fr hotr">
+					<h2>独家热门资讯</h2>
+					<div class="tu">
+						<a href="#"><img src="img/t01565ae109d01e6b47.jpg" alt="" /></a>
+						<p class="p1"></p>
+						<p class="p2"><a href="#" class="col">《小西天狄道传奇》高僧忍辱救苍生</a></p>
+					</div>
+					<p><a href="#">二十国集团峰会即将开幕</a></p>
+					<p><a href="#">官员与同学开房被撤职 称“和衣而睡”</a></p>
+					<p><a href="#">深扒范玮琪如何从“万人迷”变为“万</a></p>
+					<p><a href="#">堂姐设毒宴接风 23岁嫩模酒店吸毒被拘</a></p>
+					<p><a href="#">美媒炒中国新航母使用电磁弹射</a></p>
+				</ul>
+			</div>
+			<div class="hot clearfix">
+				<div class="hotl fl">
+					<div class="lt fl">
+						<h2>动漫</h2>
+						<i class="ii1">
+							<a href="#">热门</a>
+						</i>
+						<i>
+							<a href="#">日韩</a>
+						</i>
+						<i>
+							<a href="#">国产</a>
+						</i>
+						<i>
+							<a href="#">欧美</a>
+						</i>
+						<i class="ii">
+							<a href="#">更多>></a>
+						</i>
+					</div>
+					<div class="ldl fl">
+						<div class="left fl">
+							<div class="tt">
+								<img src="img/t0158be0b7f78864e3a.png" alt="" />
+								<p class="pp"></p>
+								<p class="p">趁其不备拔腿逃走</p>
+							</div>
+							<p class="ppp">女子餐厅被刀架脖劫持 假装喂劫犯饮料瞬间逃离</p>
+						</div>
+						<div class="tu4 fl">
+							<div class="fl aa">
+								<div class="tt">
+									<img src="img/t01d15838b7308c10f2.png" alt="" />
+									<p class="pp"></p>
+									<p class="p">与TFBOYS合影</p>
+								</div>
+								<p class="ppp p3">李小璐甜馨穿亲子装出街</p>
+								<div class="tt">
+									<img src="img/t01c6f6b10e3b20b386.png" alt="" />
+									<p class="pp"></p>
+									<p class="p">小女儿罕见露面</p>
+								</div>
+								<p class="ppp">文章为爱马庆生照曝光</p>
+							</div>
+							<div class="fl bb">
+								<div class="tt">
+									<img src="img/t01d8a50b0ceb0b69a0.png" alt="" />
+									<p class="pp"></p>
+									<p class="p">与TFBOYS合影</p>
+								</div>
+								<p class="ppp p3">北京居民遛狗现淫秽窝点</p>
+								<div class="tt">
+									<img src="img/t0152ee44c274ae3177.png" alt="" />
+									<p class="pp"></p>
+									<p class="p">与TFBOYS合影</p>
+								</div>
+								<p class="ppp">澳海滩现奇特蓝色生物</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h4>每日更新</h4>
+				<ul class="day fr" id="ul1">
+					<li>
+						<p class="pw1">一</p>
+					</li>
+					<li>
+						<p class="pw">二</p>
+					</li>
+					<li>
+						<p class="pw">三</p>
+					</li>
+					<li>
+						<p class="pw">四</p>
+					</li>
+					<li>
+						<p class="pw">五</p>
+					</li>
+					<li>
+						<p class="pw">六</p>
+					</li>
+					<li>
+						<p class="pw">日</p>
+					</li>
+				</ul>
+				<ul id="ul2">
+					<li class="scroll">
+						<p class="p1">111111</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+					</li>
+					<li class="sc">
+						<p class="p1">aaaaaaaa</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+					</li>
+					<li class="sc">
+						<p class="p1">bbbbbbbb</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+					</li>
+					<li class="sc">
+						<p class="p1">ccccccc</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+					</li>
+					<li class="sc">
+						<p class="p1">dddddddd</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+					</li>
+					<li class="sc">
+						<p class="p1">eeeeeee</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+					</li>
+					<li class="sc">
+						<p class="p1">fffffff</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+						<p class="p1">画江湖之灵主</p>
+						<p class="p2">更新至：6级</p>
+					</li>
+				</ul>
+			</div>
+			<div class=" last hot clearfix">
+				<div class="hotl fl">
+					<div class="lt fl">
+						<h2>独家策划</h2>
+						<i class="ii1">
+							<a href="#">明星剧场</a>
+						</i>
+						<i>
+							<a href="#">音乐会</a>
+						</i>
+						<i>
+							<a href="#">体坛荷尔蒙</a>
+						</i>
+						<i>
+							<a href="#">搞笑联盟台</a>
+						</i>
+						<i class="ii">
+							<a href="#">美女时尚</a>
+						</i>
+					</div>
+			</div>
+				<div class="lastl fl">
+					<ul class="llt fl">
+						<li class="fl">
+							<a href="#">
+								<img src="img/mv1.jpg" alt=""/>
+							</a>
+						</li>
+						<li class="fl">
+							<a href="#">
+								<img src="img/mv2.jpg" alt=""/>
+							</a>
+						</li>
+						<li class="fl">
+							<a href="#">
+								<img src="img/mv3.jpg" alt=""/>
+							</a>
+						</li>
+					</ul>
+					<ul class="llb fl">
+						<li class="fl">
+							<a href="#">
+								<img src="img/mv4.jpg" alt=""/>
+							</a>
+						</li>
+						<li class="fl">
+							<a href="#">
+								<img src="img/mv5.jpg" alt=""/>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="lastr fr">
+					<a href="#">
+						<img src="img/mv6.jpg" alt=""/>
+					</a>
+				</div>
+			</div>
+			<div class="over">
+				<p><a href="#">意见反馈</a></p>
+				<p><a href="#">官方微博</a></p>
+				<p><a href="#">加入收藏</a></p>
+				<p><a href="#">官方声明</a></p>
+				<p><a href="#">关于我们</a></p>
+				<p class="px"><a href="#">联系方式</a></p>
+			</div>
+			<br />
+			<p class="dd">
+				<a href="#">copyright@360安全网址.All Rights Reserved</a> 
+				<a href="#">浙ICP证B2-20090064号</a>  
+				<a href="#">信息网络传播试听许可证1109357号</a>
+			</p>
+	</body>
+</html>

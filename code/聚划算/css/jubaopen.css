@@ -1,0 +1,33 @@
+html{ font-size: 100px; }
+body{ font-size: 0.14rem; font-family: "Microsoft YaHei";}
+header{  background: -webkit-linear-gradient(#fff,#efefef); position: relative; padding:0.3rem 0; }
+header h1{ height: 0.39rem; font-size: 0.3rem; color: #333; margin: 0 auto; text-align: center; font-weight: normal;}
+header .a1{ background: url(../img/fanhui.png) no-repeat; background-size: cover; width: 1.22rem; height: 0.58rem; position: absolute; left: 0.22rem; top: 0.22rem; }
+
+
+nav ul{ display: flex; }
+nav ul li{ flex: 1; float: left; line-height: 0.8rem; border: 0.01rem solid #efefef; box-sizing: border-box; text-align: center;}
+nav ul li:nth-child(1), nav ul li:nth-child(2){ border-left: none; }
+nav ul li:nth-child(2), nav ul li:nth-child(3), nav ul li:nth-child(4){ border-right: none; }
+nav ul li a{ color: #999; font-size: 0.22rem; }
+nav ul li .on{ color: #d51942; }
+
+.banner{ margin-bottom: 0.2rem; }
+.banner img{ width: 100%; vertical:top; margin-bottom: 0.2rem;}
+.banner ol { width: 1.3rem; margin: 0 auto;}
+.banner ol li{width: 0.1rem; height: 0.1rem; background: #a9a9a9; border-radius: 50%; float: left; margin: 0 0.05rem 0 0.05rem;}
+.banner ol .on{ background: #333; }
+
+
+.content ul li{ border-top: 0.01rem solid #efefef; padding: 0.4rem 0.34rem;}
+.content ul li a img{ width: 0.78rem; margin-right: 0.5rem; }
+.content ul li a div{ margin-top: -0.08rem; }
+.content ul li a div h2{ color: #6a237f; font-size: 0.34rem; line-height: 0.58rem; }
+.content ul li a div .h21{ color: #9e5f44; }
+.content ul li a div .h22{ color: #8db46d; }
+.content ul li a div p{ color: #999; font-size: 0.22rem; }
+.content ul li a span{ color: #ccc; font-size: 0.3rem; margin-top: 0.14rem; }
+
+
+
+

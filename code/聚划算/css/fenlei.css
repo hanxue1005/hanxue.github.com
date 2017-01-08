@@ -1,0 +1,9 @@
+body{ background: #333; color: #fff; }
+header ul{ display: flex; width: 5.2rem;  margin-left: 0.2rem; border-bottom: 0.01rem solid #404040; padding-top: 0.1rem;}
+header ul li{ flex:1; font-size: 0.26rem;text-align: center; line-height: 0.58rem;}
+header ul li:nth-child(1){ border-bottom: 0.04rem solid #fff; }
+
+nav{ padding-top: 0.14rem; }
+nav ul { float: left; }
+nav .ul1{ margin-left: 1.5rem; }
+nav ul li{ color: #aaa; font-size: 0.26rem; line-height: 0.8rem; margin-left: 0.42rem; }

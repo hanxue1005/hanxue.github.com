@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+a:hover{
+	color:#2db8ad;
+}
+.b_head{
+	height:30px;
+	width:100%;
+	border-bottom:1px solid #dfdfdf;
+	background:#f5f5f5;
+	box-shadow:10px 5px 15px #f7f7f7;
+}
+ li a{
+	float:left;
+	color:#666;
+	border-right:1px solid #ddd;
+	margin-right:16px;
+	padding-right:10px;
+	margin-top:8px;
+}
+ li .b_i1{
+	background:url(../../images/zsj.png) no-repeat;
+	width:10px;
+	height:16px;
+	float:left;
+	margin-right:4px;
+}
+ li .b_i2{
+	background:url(../../images/zdsj.png) no-repeat;
+	width:6px;
+	height:3px;
+	float:right;
+	margin-top:4px;
+	margin-left:8px;
+}
+ .b_l a{
+	border:none;
+	margin-right:0;
+	padding-right:0;
+}
+.b_li a{
+	border:none;
+}
+.b_hlr{
+	float:right;
+}
+.b_hlr li{
+	float:left;
+}
+ li .b_i3{
+	background:url(../../images/zgwc.jpg) no-repeat;
+	width:13px;
+	height:12px;
+	float:left;
+	margin-right:4px;
+}
+.b_span{
+	color:#F00;
+	margin:0 2px;
+}
+
+/*logo*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

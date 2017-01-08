@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./Css/index.css" />
+<script src="../js/common.js"></script>
+<script src="jquery-1.7.2.js"></script>
+<script>
+	$(function(){
+		var URL = 'wish.php';
+		var id = 0;
+		var zIndex = 1;
+		var jsonhref = {
+			'抓狂':'./Images/phiz/zhuakuang.gif',
+			'抱抱':'./Images/phiz/baobao.gif',
+			'害羞':'./Images/phiz/haixiu.gif',
+			'酷':'./Images/phiz/ku.gif',
+			'嘻嘻':'./Images/phiz/xixi.gif',
+			'太开心':'./Images/phiz/taikaixin.gif',
+			'偷笑':'./Images/phiz/touxiao.gif',
+			'钱':'./Images/phiz/qian.gif',
+			'花心':'./Images/phiz/huaxin.gif',
+			'挤眼':'./Images/phiz/jiyan.gif'
+		}; 
+		//显示
+		$('#send').click(function(){	
+			$('#layer').show();
+			$('#send-form').show().css('left',450);
+		});	
+		//隐藏
+		$('#close').click(function(){
+			$('#layer').hide();
+			$('#send-form').hide();	
+		});
+		//img
+		$('#phiz').delegate('img','click',function(){
+			$('#content').val($('#content').val()+'['+$(this).attr('alt')+']');	
+			$('#font-num').html($('#font-num').html()-$(this).attr('alt').length);	
+		});
+		//发布 wish.php?act=add&username=xxx&content=xxx  {error:0, msg:xxx}
+		$('#send-btn').click(function(){
+			$.get(URL,{
+				act:'add',
+				username:$('#username').val(),
+				content:$('#content').val()	
+			},function(data){
+				getWishes();
+				var json = eval('('+data+')');
+				if(!json.error){
+					$('#layer').hide();
+					$('#send-form').hide();	
+					$('#username').val('');
+					$('#content').val('');	
+					//获取心愿
+					createWish($('#username').val(),$('#content').val(),id,time);									
+				}
+			});
+		});
+		//获取心愿		
+		getWishes();	
+		//wish.php?act=get
+		//{error:0, msg:[{'id':1, 'username':'xxx', 'content':'xxx','time':'xxx'},{},{},{}.......]}
+		function getWishes(){
+			$.get(URL,{
+				act:'get'	
+			},function(data){
+				var json = eval('('+data+')');	
+				if(!json.error){
+					$('#main').html('');
+					for(var i = 0; i<(json.msg).length; i++){
+						var id = json.msg[i].id;
+						var username = json.msg[i].username;
+						var content = json.msg[i].content;
+						var time = json.msg[i].time;
+						for(var name in jsonhref){
+							var re = new RegExp('\\['+name+'\\]','g');
+							content = content.replace(re,'<img src="'+jsonhref[name]+'" />');
+						}						
+						//删除心愿	wish.php?act=delete&id=0;	{error:0, msg:xxx}
+						createWish(username,content,id,time*1000);
+						$('#main .close').click(function(){
+							if(confirm('真的要删除吗？')){
+								$.get(URL,{
+									act:'delete',
+									id:id	
+								},function(data){
+									var json = eval('('+data+')');
+										if(!json.error){
+										$('#main').remove(json.msg[i]);	
+									}		
+								});	
+							}
+						});	
+					}	
+				}
+			});	
+		}	
+		//创建元素
+		function createWish(userName,content,id,time){
+			var oDate = new Date();
+			oDate.setTime(time);
+			var oTime = oDate.getFullYear()+'-'+toDou(oDate.getMonth()+1)+'-'+toDou(oDate.getDate())+' '+toDou(oDate.getHours())+':'+toDou(oDate.getMinutes())+':'+toDou(oDate.getSeconds());
+			var num = '';
+			if(id<10){
+				num = 'NO.0000' + id;
+			}else if(id>9 && id<100){
+				num = 'NO.000' + id;
+			}else if(id>99 && id<1000){
+				num = 'NO.00' + id;
+			}else if(id>999 && id<10000){
+				num = 'NO.0' + id;
+			}
+			var str = 
+				'<dt>\
+				<span class=\'username\'>'+userName+'</span>\
+				<span class=\'num\'>'+num+'</span>\
+				</dt>\
+				<dd class=\'content\'>'+content+'</dd>\
+				<dd class=\'bottom\'>\
+					<span class=\'time\'>'+oTime+'</span>\
+					<a href="" class=\'close\'></a>\
+				</dd>'
+			;
+			var str1 = 'paper a'+rnd(1,6);
+			$('<dl>'+str+'</dl>').appendTo($('#main')).css({
+				left:rnd(0,$(window).width()-235),
+				top:rnd(0,$(window).height()-177-126)
+			}).addClass(str1).mousedown(function(event){
+				var _this = this;
+				var disX = event.clientX - $(this).offset().left;
+				var disY = event.clientY - $(this).offset().top;
+				$(_this).css({opacity:0.5});
+				function move(event){
+					var l = event.clientX - disX;
+					var t = event.clientY - disY-126;	
+					if(l<0){l=0;}	
+					if(t<0){t=0;}
+					if(l>=$(window).width()-235){l=$(window).width()-235;}	
+					if(t>=$(window).height()-177-126){t=$(window).height()-177-126;}		
+					$(_this).css({
+						left:l,
+						top:t,
+						zIndex:zIndex++
+					});
+				}
+				$(document).bind('mousemove',move);
+				$(document).bind('mouseup',up);
+				function up(){
+					$(_this).css({opacity:1});
+					$(document).unbind('mousemove',move);
+					$(document).unbind('mouseup',up);
+					_this.releaseCapture && _this.releaseCapture();
+				}
+				_this.setCapture && _this.setCapture();
+				return false;
+			});
+		};
+		//还可以输入多少字 font-num  content
+		/*$('#content')[0].oninput = $('#content')[0].onpropertychange= function(){
+			$('#font-num').html(50-$('#content')[0].value.length);
+			$('#font-num').html(50-name);//jsonhref[name]
+		};*/
+		if(navigator.userAgent.indexOf('MSIE 9.0') != -1){
+                var timer = null;
+                $('#content')[0].onfocus=function(){
+					timer = setInterval(function(){
+						document.title = $('#content')[0].value.length;
+					},100);
+				}; 
+               	$('#content')[0].onblur=function(){
+					clearInterval(timer);
+				};   
+            }
+            else{			
+                $('#content')[0].oninput = $('#content')[0].onpropertychange= function(){	
+					if($('#font-num').html() == 0){
+						$(this).keydown(function(){
+							return;	
+						})
+					}else{						
+						$('#font-num').html(50-$('#content')[0].value.length);
+					}
+				 	
+                };
+            }
+	});
+</script>
+
+</head>
+<body>
+<div id='top'>
+    <span id='send'></span>
+</div>
+<div id='main'>
+</div>
+
+<div id="layer"></div>
+
+<div id='send-form' style="z-index:2147483647;">
+    <p class='title'><span>许下你的愿望</span><a href="javascript:;" id='close'></a></p>
+    <form action="" name='wish'>
+        <p>
+            <label for="username">昵称：</label>
+            <input type="text" name='username' id='username'/>
+        </p>
+        <p>
+            <label for="content">愿望：(您还可以输入&nbsp;<span id='font-num'>50</span>&nbsp;个字)</label>
+            <textarea name="content" id='content'></textarea>
+            <div id='phiz'>
+                <img src="./Images/phiz/zhuakuang.gif" alt="抓狂" />
+                <img src="./Images/phiz/baobao.gif" alt="抱抱" />
+                <img src="./Images/phiz/haixiu.gif" alt="害羞" />
+                <img src="./Images/phiz/ku.gif" alt="酷" />
+                <img src="./Images/phiz/xixi.gif" alt="嘻嘻" />
+                <img src="./Images/phiz/taikaixin.gif" alt="太开心" />
+                <img src="./Images/phiz/touxiao.gif" alt="偷笑" />
+                <img src="./Images/phiz/qian.gif" alt="钱" />
+                <img src="./Images/phiz/huaxin.gif" alt="花心" />
+                <img src="./Images/phiz/jiyan.gif" alt="挤眼" />
+            </div>
+        </p>
+        <span id='send-btn'></span>
+    </form>
+</div>
+<!--[if IE 6]>
+<script type="text/javascript" src="./Js/iepng.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('#send,#close,.close','background');
+</script>
+<![endif]-->
+</body>
+</html>

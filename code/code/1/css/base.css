@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	font-family:'微软雅黑';
+}
+.clearfix:after{
+	display:block;
+	clear:both;
+	content:"";
+}
+.clearfix{
+	zoom:1;
+}
+ul, dl{
+	list-style:none;
+}
+a{
+	color:#000;
+	font-size:12px;
+	text-decoration:none;
+}
+b{
+	font-weight:normal;	
+}
+img{
+	display:block;
+}
+
+
+
+
+
+
+
+
+
+

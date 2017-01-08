@@ -1,0 +1,133 @@
+﻿
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社是一家专注于web前端开发技术的公司，目前主要提供JavaScript培训和HTML5培训两项服务，同时还推出了大量javascript基础知识教程，智能课堂为你带来全新的学习方法和快乐的学习体验。" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>智能社— http://www.zhinengshe.com</title>
+<style>
+.box input.on{ background:yellow; }
+.box div{ width:200px; height:200px; border:1px solid red; display:none; }
+.box div.show{ display:block; }
+</style>
+<script>
+function Tab(id){
+	if(!id)return;			//继承必须阻止id
+	this.oBox=document.getElementById(id);
+	this.aBtn=this.oBox.getElementsByTagName('input');
+	this.aDiv=this.oBox.getElementsByTagName('div');
+	this.iNow=0;
+	this.init();
+}
+Tab.prototype.init=function (){
+	var _this=this;
+	for(var i=0; i<this.aBtn.length; i++){
+		this.aBtn[i].index=i;
+		this.aBtn[i].onclick=function (){
+			_this.iNow=this.index;
+			_this.tab();
+		};
+	}
+};
+Tab.prototype.tab=function (){
+	for(var i=0; i<this.aBtn.length; i++){
+		this.aBtn[i].className='';
+		this.aDiv[i].className='';
+	}
+	this.aBtn[this.iNow].className='on';
+	this.aDiv[this.iNow].className='show';
+};
+//===========自动播放继承===============
+function AutoTab(id){
+	Tab.apply(this,arguments);
+	this.timer=null;
+	this.auto();
+}
+
+AutoTab.prototype=new Tab();
+AutoTab.prototype.constructor=AutoTab;
+AutoTab.prototype.auto=function (){
+	this.open();
+	this.over();
+	this.out();
+};
+
+AutoTab.prototype.over=function (){
+	var _this=this;
+	this.oBox.onmouseover=function (){
+		clearInterval(_this.timer);
+	};
+};
+
+AutoTab.prototype.out=function (){
+	var _this=this;
+	this.oBox.onmouseout=function (){
+		_this.open();
+	};
+};
+
+AutoTab.prototype.open=function (){
+	var _this=this;
+	this.timer=setInterval(function (){
+		_this.next();
+	},500);
+};
+
+AutoTab.prototype.next=function (){
+	this.iNow++;
+	if(this.iNow==this.aBtn.length){
+		this.iNow=0;
+	}
+	this.tab();
+};
+
+window.onload=function (){
+	new Tab('box');
+	new AutoTab('box2');
+};
+</script>
+</head>
+
+<body>
+	<div class="box" id="box">
+    	<input class="on" type="button" value="按钮1" />
+    	<input type="button" value="按钮2" />
+    	<input type="button" value="按钮3" />
+        <div class="show">111</div>
+        <div>222</div>
+        <div>333</div>
+    </div>
+    <div class="box" id="box2">
+    	<input class="on" type="button" value="按钮1" />
+    	<input type="button" value="按钮2" />
+    	<input type="button" value="按钮3" />
+        <div class="show">111</div>
+        <div>222</div>
+        <div>333</div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+'use strict';
+$(function(){
+	/*var iNow = 0;
+	//$('.banner ol li').eq(index).addClass('active').siblings('.banner ol li').removeClass('on');
+	$('.banner ul').css({
+		width:$('.banner ul li').eq(0).width()*$('.banner ul li').length;
+	});
+	function next(){
+		$('.banner ol li').eq(iNow).stop().animate({
+			$('.banner ol li').css()
+		},1000,function(){
+			iNoww++;
+			if(iNow>=$('.banner ol li').length){
+				iNow=0;
+			}
+			$('ol li i').css({width:0});
+                $('#box ul').stop().animate(
+                    {
+                        left:-$('#box ul li').eq(0).width()*iNow
+                    }
+
+            );
+            next();
+		})
+	}
+	next();*/
+});
+

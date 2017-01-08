@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能社--http://www.zhinengshe.com</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box{
+            width: 512px;
+            height: 320px;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #box ul{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #box ul li{
+            width: 512px;
+            height: 320px;
+            float: left;
+        }
+        #box ul li img{
+            width: 100%;
+            height: 100%;
+        }
+        #box ol{
+            position: absolute;
+            bottom: 10px;
+            width: 400px;
+            left: 50%;
+            margin-left: -200px;
+        }
+        #box ol li{
+            width: 80px;
+            height: 20px;
+            float: left;
+            position: relative;
+            margin: 10px;
+            background: #34495e;
+        }
+        #box ol li span{
+            width: 0px;
+            height: 100%;
+            position: absolute;
+            background: #e74c3c;
+        }
+    </style>
+    <script src="../js/move.js"></script>
+    <script>
+        window.onload = function () {
+            var oBox = document.getElementById('box');
+            var oUl = oBox.children[0];
+            var oOl = oBox.children[1];
+            var aLi = oUl.children;
+            var aSpan = oOl.getElementsByTagName('span');
+
+            oUl.style.width = aLi[0].offsetWidth * aLi.length + 'px';
+            var W = aLi[0].offsetWidth;
+
+            var iNow = 0;
+            function next(){
+                move(aSpan[iNow%aLi.length],{width:80},{duration:1000,complete:function(){
+                    iNow++;
+                    //iNow%=aLi.length;
+                    if(iNow>=aLi.length){iNow=0;}
+                    move(oUl,{left:-W*iNow});
+
+                    for(var i = 0; i < aSpan.length; i++){
+                        aSpan[i].style.width = 0;
+                    }
+
+                    next();
+                }});
+            }
+            next();
+
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><img src="img/1.jpg" alt=""></li>
+        <li><img src="img/2.jpg" alt=""></li>
+        <li><img src="img/3.jpg" alt=""></li>
+        <li><img src="img/4.jpg" alt=""></li>
+    </ul>
+    <ol>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+    </ol>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
